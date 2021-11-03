@@ -7,6 +7,9 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
     }
     public function index()
     {
