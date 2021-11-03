@@ -115,4 +115,9 @@ class Auth extends CI_Controller
         Kamu telah keluar</div>');
         redirect('auth');
     }
+
+    public function blocked()
+    {
+        $this->load->view('auth/blocked');
+    }
 }
