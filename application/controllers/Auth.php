@@ -7,12 +7,13 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
-        if ($this->session->userdata('email')) {
-            redirect('user');
-        }
     }
     public function index()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
+
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', [
             'required' => 'Harap mengisi Email',
             'valid_email' => 'Email tidak valid'
@@ -71,6 +72,10 @@ class Auth extends CI_Controller
 
     public function  registration()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
+
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
             'required' => 'Harap mengisi Email',
@@ -112,8 +117,7 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('email');
-        $this->session->unset_userdata('role_data');
-
+        $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         Kamu telah keluar</div>');
         redirect('auth');
