@@ -9,6 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('anggota_model', 'anggota');
+        $this->load->model('dashboard_model', 'dashboard');
     }
 
     public function index()
@@ -16,6 +17,9 @@ class Admin extends CI_Controller
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
+        $data['anggota'] = $this->dashboard->anggota();
+        $data['menunggu_aktivasi'] = $this->dashboard->menunggu_aktivasi();
+        $data['anggota_aktif'] = $this->dashboard->anggota_aktif();
 
 
         $this->load->view('templates/header', $data);
