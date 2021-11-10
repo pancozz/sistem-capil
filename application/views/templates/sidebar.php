@@ -4,7 +4,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-            <i class="far fa-building"></i>
+            <img src="<?= base_url('assets/img/logo/img.png') ?>" class="mx-auto d-block mb-1" width="auto" height="60px">
         </div>
         <div class="sidebar-brand-text mx-3">DUKCAPIL</div>
     </a>

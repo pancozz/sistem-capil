@@ -7,7 +7,10 @@
                 <div class="col-lg">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Registrasi</h1>
+                            <div class="img">
+                                <img src="<?= base_url('assets/img/logo/img.png') ?>" class="mx-auto d-block mb-3" width="auto" height="150px">
+                            </div>
+                            <h1 class="h4 text-gray-900 mb-4">Buat Akun</h1>
                         </div>
                         <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
                             <div class="form-group">

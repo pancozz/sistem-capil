@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/favicon.ico') ?>" />
     <title><?= $title; ?></title>
 
     <!-- Custom fonts for this template-->

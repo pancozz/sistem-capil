@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/favicon.ico') ?>" />
     <title>
         <?= $title ?>
     </title>
@@ -22,4 +23,11 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<style class="text/css">
+    body {
+        background: url(assets/img/bg.jpg) no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body class="bg-light">
