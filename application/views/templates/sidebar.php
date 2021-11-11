@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('user'); ?>">
         <div class="sidebar-brand-icon">
             <img src="<?= base_url('assets/img/logo/img.png') ?>" class="mx-auto d-block mb-1" width="auto" height="60px">
         </div>
